@@ -21,6 +21,12 @@ class AppRoutes {
         icon: Icons.account_circle,
         title: 'About Me',
         screen: const AboutMe()),
+    MenuOption(
+      route: 'customcardtype1',
+      icon: Icons.card_giftcard,
+      title: 'Custom Card Type1',
+      screen: const CustomCardType1(),
+    ),
   ];
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
     Map<String, Widget Function(BuildContext)> appRoutes = {};
