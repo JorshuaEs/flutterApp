@@ -17,16 +17,22 @@ class AppRoutes {
         title: 'Listview type 2',
         screen: const ListViewScreen2()),
     MenuOption(
-        route: 'aboutme',
-        icon: Icons.account_circle,
-        title: 'About Me',
-        screen: const AboutMe()),
-    MenuOption(
       route: 'customcardtype1',
       icon: Icons.card_giftcard,
       title: 'Custom Card Type1',
       screen: const CustomCardType1(),
     ),
+    MenuOption(
+      route: 'cardscreen',
+      icon: Icons.card_giftcard,
+      title: 'Card Screen',
+      screen: const CardScreen(),
+    ),
+    MenuOption(
+        route: 'aboutme',
+        icon: Icons.account_circle,
+        title: 'About Me',
+        screen: const AboutMe()),
   ];
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
     Map<String, Widget Function(BuildContext)> appRoutes = {};
