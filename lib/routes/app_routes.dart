@@ -33,6 +33,11 @@ class AppRoutes {
         icon: Icons.account_circle,
         title: 'About Me',
         screen: const AboutMe()),
+    MenuOption(
+        route: 'prueba',
+        icon: Icons.phone,
+        title: 'Tarjetas - Prueba',
+        screen: const PruebaScreen())
   ];
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
     Map<String, Widget Function(BuildContext)> appRoutes = {};
