@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:app_flutter/widgets/widgets.dart';
 
 class CardScreen extends StatelessWidget {
   const CardScreen({Key? key}) : super(key: key);
@@ -15,7 +16,7 @@ class CardScreen extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         children: [
-          CustomCardType1(),
+          custom_card_type_1(),
           SizedBox(height: 10),
           CustomCardType2(
             imageUrl:
@@ -33,66 +34,6 @@ class CardScreen extends StatelessWidget {
                 'https://i.pinimg.com/736x/9f/07/94/9f079430506df322b13cab6478fe926a.jpg',
           ),
           SizedBox(height: 100),
-        ],
-      ),
-    );
-  }
-
-  Widget CustomCardType1() {
-    return SizedBox(
-      height: 216,
-      width: 500,
-      child: Card(
-        color: Colors.lightBlue[50],
-        child: Column(
-          children: [
-            const ListTile(
-              leading: Icon(Icons.photo_album_outlined, color: Colors.indigo),
-              title: Text("I'm title"),
-              subtitle: Text(
-                  'Ad et cillum incididunt duis Lorem consectetur dolor ex irure consectetur do velit enim eiusmod. Mollit aliquip amet amet elit deserunt ex incididunt magna laboris.'),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 5),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  TextButton(
-                    onPressed: () {},
-                    child: const Text('Cancel'),
-                  ),
-                  TextButton(onPressed: () {}, child: const Text('Ok')),
-                ],
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
-  Widget CustomCardType2({String? name, required String imageUrl}) {
-    return Card(
-      clipBehavior: Clip.antiAlias,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
-      elevation: 30,
-      shadowColor: Colors.black.withOpacity(0.5),
-      child: Column(
-        children: [
-          FadeInImage(
-            image: NetworkImage(imageUrl),
-            placeholder: const AssetImage('assets/images/jar-loading.gif'),
-            width: double.infinity,
-            height: 230,
-            fit: BoxFit.cover,
-            fadeInDuration: const Duration(milliseconds: 300),
-          ),
-          if (name != null)
-            Container(
-              alignment: AlignmentDirectional.centerEnd,
-              padding: const EdgeInsets.only(right: 20, top: 10, bottom: 10),
-              child: Text(name),
-            ),
         ],
       ),
     );

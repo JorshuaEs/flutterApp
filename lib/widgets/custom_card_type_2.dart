@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
 
-class custom_card_type_2 extends StatelessWidget {
-  const custom_card_type_2({
-    super.key,
-  });
+class CustomCardType2 extends StatelessWidget {
+  const CustomCardType2({
+    Key? key,
+    required this.imageUrl,
+    this.name,
+  }) : super(key: key);
+
+  final String imageUrl;
+  final String? name;
 
   @override
-  Widget build({BuildContext context}) {
+  Widget build(BuildContext context) {
     return Card(
       clipBehavior: Clip.antiAlias,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
@@ -26,7 +31,7 @@ class custom_card_type_2 extends StatelessWidget {
             Container(
               alignment: AlignmentDirectional.centerEnd,
               padding: const EdgeInsets.only(right: 20, top: 10, bottom: 10),
-              child: Text(name),
+              child: Text(name!),
             ),
         ],
       ),
