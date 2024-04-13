@@ -6,9 +6,6 @@ class CardScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final String imageUrl;
-    final String? name;
-
     return Scaffold(
       appBar: AppBar(
         title: const Text('Card Widget'),
