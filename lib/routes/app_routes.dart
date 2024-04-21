@@ -43,6 +43,12 @@ class AppRoutes {
         icon: Icons.credit_card,
         title: 'Card Homework',
         screen: const CardHomeworkScreen()),
+    MenuOption(
+      route: 'inputs',
+      icon: Icons.input,
+      title: 'Inputs y Forms',
+      screen: const InputsScreen(),
+    ),
   ];
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
     Map<String, Widget Function(BuildContext)> appRoutes = {};

@@ -13,3 +13,5 @@ export 'package:app_flutter/screens/card_screen.dart';
 export 'package:app_flutter/screens/prueba.dart';
 
 export 'package:app_flutter/screens/card_homework_screen.dart';
+
+export 'package:app_flutter/screens/inputs_screen (1).dart';

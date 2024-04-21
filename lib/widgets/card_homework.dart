@@ -20,7 +20,7 @@ class CardHomework extends StatelessWidget {
         // Navegar a la otra página
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => HomeScreen()),
+          MaterialPageRoute(builder: (context) => const HomeScreen()),
         );
       },
       child: Card(
